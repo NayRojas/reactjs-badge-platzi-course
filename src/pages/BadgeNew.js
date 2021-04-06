@@ -3,7 +3,7 @@ import NavBar from "../components/Navbar";
 import header from "../images/badge-header.svg";
 import Badge from "../components/Badge";
 import avatar from "../images/avatar.png";
-
+import BadgeForm from "../components/BadgeForm";
 class BadgeNew extends React.Component {
   render() {
     return (
@@ -22,6 +22,9 @@ class BadgeNew extends React.Component {
                 twitter="@nayrojas_"
                 avatar={avatar}
               ></Badge>
+            </div>
+            <div className="col">
+              <BadgeForm />
             </div>
           </div>
         </div>
