@@ -7,6 +7,7 @@ import BadgesList from "../components/BadgesList";
 import PageLoading from "../components/PageLoading";
 import PageError from "../components/PageError";
 import api from "../api";
+import Skeleton from "react-loading-skeleton";
 
 class Badges extends React.Component {
   state = {
@@ -46,7 +47,7 @@ class Badges extends React.Component {
             <div className="Badges__container">
               <img
                 className="Badges_conf-logo"
-                src={confLogo}
+                src={confLogo || <Skeleton />}
                 alt="Conf Logo"
               />
             </div>
@@ -60,7 +61,7 @@ class Badges extends React.Component {
             </Link>
           </div>
 
-          <BadgesList badges={this.state.data} />
+          <BadgesList badges={this.state.data || <Skeleton />} />
         </div>
       </React.Fragment>
     );
