@@ -5,17 +5,17 @@ class BadgeForm extends React.Component {
     console.log("button was clicked");
   };
 
-  onHandleSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state);
-    console.log("Form submitted");
-  };
+  // onHandleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(this.state);
+  //   console.log("Form submitted");
+  // };
   render() {
     return (
       <div>
         <h1>New Attendant</h1>
 
-        <form onSubmit={this.onHandleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
             <input
@@ -66,7 +66,11 @@ class BadgeForm extends React.Component {
               value={this.props.formValues.twitter}
             />
           </div>
-          <button onClick={this.handleClick} className="btn btn-primary">
+          <button
+            onClick={this.handleClick}
+            className="btn btn-primary"
+            onSubmit={this.handleSubmit}
+          >
             Save
           </button>
         </form>
