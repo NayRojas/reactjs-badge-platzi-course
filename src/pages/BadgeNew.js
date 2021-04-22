@@ -4,6 +4,7 @@ import Badge from "../components/Badge";
 import avatar from "../images/avatar.png";
 import BadgeForm from "../components/BadgeForm";
 import PageLoading from "../components/PageLoading";
+import "./styles/BadgeNew.css";
 
 import api from "../api";
 
